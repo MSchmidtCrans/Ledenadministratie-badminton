@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <title>Ledenadministratie POONA 64</title>
+</head>
+<body>
+    <!--Header-->
+    <header class="jumbotron jumbotron-fluid bg-primary mb-0 float-clear">
+            <h1 class="display-3 text-center font-weight-bolder text-white pr-3">LEDENADMINISTRATIE B.C. POONA '64</h1>
+    </header>    
+    <!--Button bar-->
+        <div class="row">
+            <button type="button" class="btn btn-primary m-2 ml-3" data-toggle="modal" data-target="#newUserModal">Nieuw lid</button>
+        </div>
+
+    <!--main Columns left and right-->
+    <div class="container-fluid" id="mainContainer">
+        <div class="row">
+            <div class="col-sm-2" id="columMainLeft" style="border-right: 2px solid blue; height: 1000px;">
+                    <h2>Filter overzicht</h2>
+                    <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="filter1" name="example1">
+                            <label class="custom-control-label" for="filter1">Competitie </label>
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="filter2" name="example1">
+                                <label class="custom-control-label" for="filter2">Bestuurslid</label>
+                              </div>
+                              <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="filter3" name="example1">
+                                    <label class="custom-control-label" for="filter3">Woonplaats</label>
+                                  </div>      
+            </div>
+            <div class="col-sm-10" id="columnMainRight">
+                    <div class="card float-left m-1" style="width:400px">
+                        <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
+                        <div class="card-body">
+                            <h4 class="card-title">Proefpersoon</h4>
+                            <p class="card-text">Gewoon een test persoon om text te vullen</p>
+                            <a href="#" class="btn btn-primary">Bekijk lid kaart</a>
+                            </div>
+                    </div>
+                    <div class="float-left card m-1" style="width:400px">
+                        <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
+                        <div class="card-body">
+                            <h4 class="card-title">Proefpersoon</h4>
+                            <p class="card-text">Gewoon een test persoon om text te vullen</p>
+                            <a href="#" class="btn btn-primary">Bekijk lid kaart</a>
+                        </div>
+                    </div>
+                    <div class="card float-left m-1" style="width:400px">
+                            <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
+                            <div class="card-body">
+                                <h4 class="card-title">Proefpersoon</h4>
+                                <p class="card-text">Gewoon een test persoon om text te vullen</p>
+                                <a href="#" class="btn btn-primary">Bekijk lid kaart</a>
+                                </div>
+                        </div>
+                        <div class="float-left card m-1" style="width:400px">
+                            <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
+                            <div class="card-body">
+                                <h4 class="card-title">Proefpersoon</h4>
+                                <p class="card-text">Gewoon een test persoon om text te vullen</p>
+                                <a href="#" class="btn btn-primary">Bekijk lid kaart</a>
+                            </div>
+                        </div>
+                    <div class="card float-left m-1" style="width:400px">
+                        <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
+                        <div class="card-body">
+                            <h4 class="card-title">Proefpersoon</h4>
+                            <p class="card-text">Gewoon een test persoon om text te vullen</p>
+                            <a href="#" class="btn btn-primary">Bekijk lid kaart</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<!--Modal for user registration-->
+<div class="modal" id="newUserModal">
+        <div class="modal-dialog model-sm">
+                <div class="modal-content">            
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Nieuw lid registratie</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>            
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="userFirstName">Voornaam:</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Voornaam" name="voornaam">
+                            </div>
+                            <div class="form-group">
+                                <label for="userLastName">Achternaam:</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Achternaam" name="achternaam">
+                            </div> 
+                            <div class="form-group">
+                                    <label for="address">Adres:</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Adres en huisnummer" name="adres">
+                                </div> 
+                                <div class="form-group">
+                                        <label for="address">Postcode en woonplaats:</label>
+                                        <input type="text" class="form-control" id="postal" placeholder="Postcode" name="adres">
+                                    </div> 
+                                <div class="form-group">
+                                        <input type="text" class="form-control" id="city" placeholder="Woonplaats" name="woonplaats">
+                                    </div> 
+                            <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                  </div>
+                            <div class="custom-control custom-radio custom-control-inline form-group">                                   
+                                    <input type="radio" class="custom-control-input" id="gender1" name="gender">
+                                    <label class="custom-control-label" for="gender1"> Man</label>
+                            </div>  
+                            <div class="custom-control custom-radio custom-control-inline form-group">                                   
+                                    <input type="radio" class="custom-control-input" id="gender2" name="gender">
+                                    <label class="custom-control-label" for="gender2"> Vrouw</label>
+                            </div> 
+                            <div class="form-group">
+                              <label for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                            
+                            <div class="custom-control custom-switch form-group custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="switch1">
+                                    <label class="custom-control-label" for="switch1">Bestuurslid</label>
+                                  </div>
+                            <div class="custom-control custom-switch form-group custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="switch2">
+                                    <label class="custom-control-label" for="switch2">Competitie speler</label>
+                            </div>
+                            <div class="custom-file form-group">
+                                    <input type="file" class="custom-file-input" id="File">
+                                    <label class="custom-file-label" for="File">Doumenten:</label>
+                            </div>     
+                                  
+                            <button type="submit" class="btn btn-primary form-group">Submit</button>
+                          </form>
+                  </div>            
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+            
+                </div>
+              </div>
+</div>
