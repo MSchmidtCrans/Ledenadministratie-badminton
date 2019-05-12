@@ -26,7 +26,7 @@
     <!--main Columns left and right-->
     <div class="container-fluid" id="mainContainer">
         <div class="row">
-            <div class="col-sm-2" id="columMainLeft" style="border-right: 2px solid blue; height: 1000px;">
+            <div class="col-sm-2 border border-left-0 border-bottom-0 " id="columMainLeft" style="height: 1000px;">
                     <h2>Filter overzicht</h2>
                     <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="filter1" name="example1">
@@ -41,7 +41,7 @@
                                     <label class="custom-control-label" for="filter3">Woonplaats</label>
                                   </div>      
             </div>
-            <div class="col-sm-10" id="columnMainRight">
+            <div class="col-sm-10 border border-right-0" id="columnMainRight">
                     <div class="card float-left m-1" style="width:400px">
                         <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
                         <div class="card-body">
@@ -120,10 +120,6 @@
                                 <div class="form-group">
                                         <input type="text" class="form-control" id="city" placeholder="Woonplaats" name="woonplaats">
                                     </div> 
-                            <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                                  </div>
                             <div class="custom-control custom-radio custom-control-inline form-group">                                   
                                     <input type="radio" class="custom-control-input" id="gender1" name="gender">
                                     <label class="custom-control-label" for="gender1"> Man</label>
@@ -133,10 +129,9 @@
                                     <label class="custom-control-label" for="gender2"> Vrouw</label>
                             </div> 
                             <div class="form-group">
-                              <label for="email">Email:</label>
-                              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                            </div>
-                            
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                  </div>
                             <div class="custom-control custom-switch form-group custom-control-inline">
                                     <input type="checkbox" class="custom-control-input" id="switch1">
                                     <label class="custom-control-label" for="switch1">Bestuurslid</label>
