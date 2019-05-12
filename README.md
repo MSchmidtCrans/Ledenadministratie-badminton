@@ -1,7 +1,7 @@
 # Ledenadministratie-badminton
 A personal project for member administration. Meant to go live after finishing my training.
 
-preview: https://supersmitty2018.github.io/Ledenadministratie-badminton/
+preview: https://supersmitty2018.github.io/Ledenadministratie-badminton/index.html
 
 1. Setup initial files on bootstrap branch -DONE-
 
