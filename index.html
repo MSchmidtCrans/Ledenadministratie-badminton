@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,23 +23,34 @@
         </div>
 
     <!--main Columns left and right-->
+    <!--Left column to show filter options on membercards-->
     <div class="container-fluid" id="mainContainer">
         <div class="row">
             <div class="col-sm-2 border border-left-0 border-bottom-0 " id="columMainLeft" style="height: 1000px;">
-                    <h2>Filter overzicht</h2>
+                <h2>Filter overzicht</h2> <hr>
+                    <h5>Filter op eigenschap:</h3>
                     <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="filter1" name="example1">
-                            <label class="custom-control-label" for="filter1">Competitie </label>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="filter2" name="example1">
-                                <label class="custom-control-label" for="filter2">Bestuurslid</label>
-                              </div>
-                              <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="filter3" name="example1">
-                                    <label class="custom-control-label" for="filter3">Woonplaats</label>
-                                  </div>      
+                        <input type="checkbox" class="custom-control-input" id="filter1" name="filter">
+                        <label class="custom-control-label" for="filter1">Competitie </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="filter2" name="filter">
+                        <label class="custom-control-label" for="filter2">Bestuurslid</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="filter4" name="filter">
+                        <label class="custom-control-label" for="filter4">Man</label>
+                    </div>     
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="filter5" name="filter">
+                        <label class="custom-control-label" for="filter5">Vrouw</label>
+                    </div>
+                    <br><h5>Filter op naam:</h3>
+
+
             </div>
+
+    <!--Column right to show membercards based on future logic-->
             <div class="col-sm-10 border border-right-0" id="columnMainRight">
                     <div class="card float-left m-1" style="width:400px">
                         <img class="card-img-top img-thumbnail" src="logo.png" alt="Card image" style="width:10%">
@@ -86,12 +96,11 @@
         </div>
 
     </div>
-</body>
-</html>
+
 
 <!--Modal for user registration-->
 <div class="modal" id="newUserModal">
-        <div class="modal-dialog model-sm">
+        <div class="modal-dialog ">
                 <div class="modal-content">            
                   <!-- Modal Header -->
                   <div class="modal-header">
@@ -100,38 +109,42 @@
                   </div>            
                   <!-- Modal body -->
                   <div class="modal-body">
-                        <form action="/action_page.php">
-                            <div class="form-group">
-                                <label for="userFirstName">Voornaam:</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Voornaam" name="voornaam">
-                            </div>
-                            <div class="form-group">
-                                <label for="userLastName">Achternaam:</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Achternaam" name="achternaam">
-                            </div> 
-                            <div class="form-group">
-                                    <label for="address">Adres:</label>
-                                    <input type="text" class="form-control" id="address" placeholder="Adres en huisnummer" name="adres">
+                        <form action="/action_page.php" class="needs-validation" novalidate>
+                                <div class="form-group">                         
+                                    <input type="text" class="form-control form-control-sm" id="firstName" placeholder="Voornaam" name="voornaam" required>
+                                    <div class="invalid-feedback">Vul uw voornaam.</div>  
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Achternaam" name="achternaam" required>
+                                    <div class="invalid-feedback">Vul uw achternaam in.</div>  
                                 </div> 
-                                <div class="form-group">
-                                        <label for="address">Postcode en woonplaats:</label>
-                                        <input type="text" class="form-control" id="postal" placeholder="Postcode" name="adres">
+                                <div class="form-group">                                    
+                                    <input type="text" class="form-control form-control-sm" id="address" placeholder="Adres en huisnummer" name="adres" required>
+                                    <div class="invalid-feedback">Vul uw adres en husnummer in.</div>  
+                                </div> 
+                                <div class="form-group">                                       
+                                    <input type="text" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" class="form-control form-control-sm" id="postal" placeholder="Postcode (1234AA)" name="adres" required>
+                                    <div class="invalid-feedback">Vul uw postcode in. (bijv. 1234aa)</div>  
+                                </div> 
+                                <div class="form-group">                                    
+                                    <input type="text" class="form-control form-control-sm" id="city" placeholder="Woonplaats" name="woonplaats" required>
+                                    <div class="invalid-feedback">Vul uw woonplaats in.</div>  
+                                </div> 
+                                <div class="form-group">                                    
+                                        <input type="text" class="form-control form-control-sm" id="phone" placeholder="Telefoonnummer" name="telefoonnummer" required>
+                                        <div class="invalid-feedback">Vul uw telefoonnummer in.</div>  
                                     </div> 
-                                <div class="form-group">
-                                        <input type="text" class="form-control" id="city" placeholder="Woonplaats" name="woonplaats">
-                                    </div> 
-                            <div class="custom-control custom-radio custom-control-inline form-group">                                   
+                                <div class="custom-control custom-radio custom-control-inline form-group">                                   
                                     <input type="radio" class="custom-control-input" id="gender1" name="gender">
-                                    <label class="custom-control-label" for="gender1"> Man</label>
-                            </div>  
+                                    <label class="custom-control-label" for="gender1"> Man</label> 
+                                </div>  
                             <div class="custom-control custom-radio custom-control-inline form-group">                                   
-                                    <input type="radio" class="custom-control-input" id="gender2" name="gender">
+                                    <input type="radio" class="custom-control-input" id="gender2" name="gender" required>
                                     <label class="custom-control-label" for="gender2"> Vrouw</label>
                             </div> 
                             <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                                  </div>
+                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="Emailadres" name="email" required>
+                            </div>
                             <div class="custom-control custom-switch form-group custom-control-inline">
                                     <input type="checkbox" class="custom-control-input" id="switch1">
                                     <label class="custom-control-label" for="switch1">Bestuurslid</label>
@@ -140,19 +153,48 @@
                                     <input type="checkbox" class="custom-control-input" id="switch2">
                                     <label class="custom-control-label" for="switch2">Competitie speler</label>
                             </div>
+                            <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" id="bondsNum" placeholder="bondsnummer" name="bondsnummer">
+                            </div>
                             <div class="custom-file form-group">
-                                    <input type="file" class="custom-file-input" id="File">
+                                    <input type="file" class="custom-file-input form-control form-control-sm" id="File">
                                     <label class="custom-file-label" for="File">Doumenten:</label>
-                            </div>     
-                                  
-                            <button type="submit" class="btn btn-primary form-group">Submit</button>
+                            </div> 
+                            <div class="form-group">                                  
+                            <button type="submit" class="btn btn-primary form-group mt-2">Opslaan</button>
+                            </div>
                           </form>
                   </div>            
                   <!-- Modal footer -->
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuleren</button>
                   </div>
             
                 </div>
               </div>
 </div>
+
+</body>
+
+<script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+</html>
+
